@@ -1,5 +1,4 @@
 import streamlit as st
-import streamlit.components.v1 as components
 
 # Set page config for a premium wide layout
 st.set_page_config(
@@ -51,4 +50,4 @@ with open("index.html", "r", encoding="utf-8") as f:
     html_content = f.read()
 
 # Render the HTML file inside the app
-components.html(html_content, height=1000, scrolling=True)
+st.iframe(html_content, height="stretch")
